@@ -1,4 +1,17 @@
+//myfreecodecamp dump for sake of logging something. 
+
+//Array Set-up
+
 var array1= [1,2,3];
 var array2= new array (4,5,6);
 
 console.log(array[]);
+
+
+//Variable int & utilization
+
+var a = 6;
+var b
+
+a=7;
+b=a;
