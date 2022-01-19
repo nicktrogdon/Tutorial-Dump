@@ -62,7 +62,7 @@ $env:PSExecutionPolicyPreference="bypass"
 
 [Invisi-Shell](https://github.com/OmerYa/Invisi-Shell) :sparkles:
 
-**with admin privileges**
+###### **with admin privileges**
 ```
 set COR_ENABLE_PROFILING=1
 set COR_PROFILER={cf0d821e-299b-5307-a3d8-b283c03916db}
@@ -75,7 +75,7 @@ set COR_PROFILER=
 set COR_PROFILER_PATH=
 ```
 
-**with non-admin privileges**
+###### **with non-admin privileges**
 ```
 set COR_ENABLE_PROFILING=1
 set COR_PROFILER={cf0d821e-299b-5307-a3d8-b283c03916db}
