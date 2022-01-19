@@ -118,115 +118,115 @@ Get-Domain
 
 Get object of another domain
 ```
-	Get-Domiain -Domain xxx.local
+Get-Domiain -Domain xxx.local
 ```
 
 Get domain SID for current domain
 ```
-	Get-DomainSID
+Get-DomainSID
 ```
 
 Get domain policy for the current domain
 ```
-	Get-DomainPolicyData
+Get-DomainPolicyData
 ```
 
 Get domain policy for another domain
 ```
-	Get-DomainPolicyData --domain xxx.local
+Get-DomainPolicyData --domain xxx.local
 ```
 
 Get domain controllers for the current domain
 ```
-	Get-DomainController
+Get-DomainController
 ```
 
 Get domain controllers for another domain
 ```
-	Get-DomainController –Domain xxx.local
+Get-DomainController –Domain xxx.local
 ```
 
 Get a list of users in the current domain
 ```
-	Get-DomainUser
+Get-DomainUser
 ```
 ```
-	Get-DomainUser -Identity <user>
+Get-DomainUser -Identity <user>
 ```
 
 Get list of all properties for users in the current domain
 ```
-	Get-DomainUser -Identity <user> -Properties *
+Get-DomainUser -Identity <user> -Properties *
 ```
 ```
-	Get-DomainUser -Properties samaccountname,logonCount
+Get-DomainUser -Properties samaccountname,logonCount
 ```
 
 
 
 Search for a particular string in a user's attributes:
 ```
-	Get-DomainUser -LDAPFilter "Description=*built*" | Select name,Description
+Get-DomainUser -LDAPFilter "Description=*built*" | Select name,Description
 ```
 
 Get a list of computers in the current domain
 ```
-	Get-DomainComputer | select Name	
+Get-DomainComputer | select Name	
 ```
 ```
-	Get-DomainComputer –OperatingSystem "*Server 2016*"
+Get-DomainComputer –OperatingSystem "*Server 2016*"
 ```
 ```
-	Get-DomainComputer -Ping
+Get-DomainComputer -Ping
 ```
 
 
 Get all the groups in the current domain
 ```
-	Get-DomainGroup | select Name	
+Get-DomainGroup | select Name	
 ```
 ```
-	Get-DomainGroup –Domain <targetdomain>
+Get-DomainGroup –Domain <targetdomain>
 ```
 
 Get all groups containing the word "admin" in group name
 ```
-	Get-DomainGroup *admin*
+Get-DomainGroup *admin*
 ```
 
 Get all the members of the Domain Admins group
 ```
-	Get-DomainGroupMember -Identity "Domain Admins" -Recurse
+Get-DomainGroupMember -Identity "Domain Admins" -Recurse
 ```
 
 Get the group membership for a user:
 ```
-	Get-DomainGroup –UserName "<user>"
+Get-DomainGroup –UserName "<user>"
 ```
 
 List all the local groups on a machine (needs administrator privs on non-dc
 machines) :
 ```
-	Get-NetLocalGroup -ComputerName dcorp-dc -ListGroups
+Get-NetLocalGroup -ComputerName dcorp-dc -ListGroups
 ```
 
 Get members of all the local groups on a machine 
 *(needs administrator privs on non-dc machines)*
 ```
-	Get-NetLocalGroup -ComputerName <corp>-dc -Recurse
+Get-NetLocalGroup -ComputerName <corp>-dc -Recurse
 ```
 
 Get members of the local group "Administrators" on a machine 
 *(needs administrator privs on non-dc machines)* :
 ```
-	Get-NetLocalGroupMember -ComputerName <corp>-dc -GroupNameAdministrators
+Get-NetLocalGroupMember -ComputerName <corp>-dc -GroupNameAdministrators
 ```
 
 
 Get actively logged users on a computer (needs local admin rights on
 the target)
 ```
-	Get-NetLoggedon –ComputerName <servername>
+Get-NetLoggedon –ComputerName <servername>
 ```
 
 
@@ -234,39 +234,32 @@ the target)
 Get locally logged users on a computer (needs remote registry on the
 target - started by-default on server OS)
 ```
-	Get-LoggedonLocal -ComputerName <corp>-dc
+Get-LoggedonLocal -ComputerName <corp>-dc
 ```
 
 Get the last logged user on a computer (needs administrative rights and
 remote registry on the target)
 ```
-	Get-LastLoggedOn –ComputerName <servername>
+Get-LastLoggedOn –ComputerName <servername>
 ```
 
 
 Find shares on hosts in current domain.
 ```
-	Invoke-ShareFinder –Verbose
+Invoke-ShareFinder –Verbose
 ```
 
 
 Find sensitive files on computers in the domain
 ```
-	Invoke-FileFinder –Verbose
+Invoke-FileFinder –Verbose
 ```
 
 
 Get all fileservers of the domain
 ```
-	Get-NetFileServer
+Get-NetFileServer
 ```
-
-
-
-
-
-
-
 
 
 
