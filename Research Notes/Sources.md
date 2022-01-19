@@ -9,6 +9,8 @@ Links
 :book: [**AD Security: Active Directory Recon Without Admin Rights**](https://adsecurity.org/?p=2535)
 
 `[System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()`
+![This is an image](/Results/AD-Security/GetCurrentDomain().png)
+
 ```
 Name
 Sites
