@@ -17,3 +17,4 @@ Links
 ```
  `[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()`
 
+ `(([System.DirectoryServices.ActiveDirectory.Forest]::GetForest((New-Object System.DirectoryServices.ActiveDirectory.DirectoryContext(‘Forest’, $ForestRootDomain)))).GetAllTrustRelationships()`
