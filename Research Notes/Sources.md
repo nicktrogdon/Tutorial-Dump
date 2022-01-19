@@ -11,9 +11,9 @@ Links
 
 
 
-###### Forest
+####  Forest
 	Forest Information
-```
+
 [System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()
 ```
 ![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/GetCurrentForest.png)
@@ -29,7 +29,7 @@ $ForestRootDomain = ‘xxx.xxx.com’
 ```
 
 
-######Domain
+#### Domain
 	Domain Information
  ```
 [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
