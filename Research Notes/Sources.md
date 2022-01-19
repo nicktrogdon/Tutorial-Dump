@@ -12,17 +12,6 @@ Links
 ![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/GetCurrentForest.png)
 
 ```
-Name
-Sites
-Domains
-GlobalCatalogs
-Application Partitions
-ForestModeLevel
-ForestMode
-RootDomain
-Schema
-SchemaRoleOwner
-NamingRoleOwner
 
 ```
  `[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()`
@@ -38,4 +27,6 @@ SourceName	TargetName	TrustType	TrustDirection
 ```
 
  `(([System.DirectoryServices.ActiveDirectory.Forest]::GetForest((New-Object System.DirectoryServices.ActiveDirectory.DirectoryContext(‘Forest’, $ForestRootDomain)))).GetAllTrustRelationships()`
-
+![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/ForestTrustRelationships.png)
+```
+```
