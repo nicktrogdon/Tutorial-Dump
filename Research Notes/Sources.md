@@ -39,7 +39,7 @@ Name
 ```
 
 
-`([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()
+`([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()`
 ```
 SourceName	TargetName	TrustType	TrustDirection
 ```
