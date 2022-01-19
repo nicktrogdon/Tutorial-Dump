@@ -58,7 +58,8 @@ powershell -encodedcommand
 $env:PSExecutionPolicyPreference="bypass"
 ```
 
-##### Security
+#### Security
+##### AMSI
 
 [Invisi-Shell](https://github.com/OmerYa/Invisi-Shell) :sparkles:
 
@@ -92,6 +93,44 @@ REG DELETE "HKCU\Software\Classes\CLSID\{cf0d821e-299b-5307-a3d8-b283c03916db}" 
 ```
 
 :broom: can be cleaned up with an *exit* command
+
+#### AV Signatures - Windows Defender
+[AMSITrigger] (https://github.com/RythmStick/AMSITrigger)
+This application will go through the script and indicate where it is being detected
+```
+AmsiTrigger_x64.exe -i C:\path\*.ps1
+```
+1. Scan using AMSITrigger
+2. Modify the detected code
+3. Rescan
+4. Repeat the steps 2 & 3 till we get a result as “AMSI_RESULT_NOT_DETECTED” or “Blank”
+
+Further steps can be taken to full obfuscate scripts with [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation)
+
+
+
+### Enumeration
+#### PowerView
+Get Current Domain
+```
+Get-Domain
+```
+Get object of another domain
+```
+Get-Domiain -Domain xxxxx.local
+```
+Get domain SID for current domain
+```
+Get-DomainSID
+```
+Get domain policy for the current domain
+```
+Get-DomainPolicyData
+```
+#### ActiveDirectory Module
+
+
+
 
 
 
