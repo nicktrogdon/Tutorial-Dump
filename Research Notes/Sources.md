@@ -9,7 +9,7 @@ Links
 :book: [**AD Security: Active Directory Recon Without Admin Rights**](https://adsecurity.org/?p=2535)
 
 `[System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()`
-
+![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/GetCurrentForest.png)
 
 ```
 Name
@@ -28,7 +28,6 @@ NamingRoleOwner
  `[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()`
 ![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/GetCurrentDomain().png)
 ```
-![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/GetCurrentDomain().png)
 
 ```
 
