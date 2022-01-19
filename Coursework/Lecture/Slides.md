@@ -54,6 +54,7 @@ powershell -c <cmd>
 ```
 powershell -encodedcommand
 ```
+```
 $env:PSExecutionPolicyPreference="bypass"
 ```
 
