@@ -8,15 +8,21 @@ Links
 
 :book: [**AD Security: Active Directory Recon Without Admin Rights**](https://adsecurity.org/?p=2535)
 
-```[System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()```
+```
+[System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()
+```
 ![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/GetCurrentForest.png)
 
 
- ```[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()```
+ ```
+[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+```
 ![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/GetCurrentDomain().png)
 
 
 
-```([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()```
+```
+([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()
+```
 ![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/ForestTrustRelationships.png)
 
