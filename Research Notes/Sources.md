@@ -8,7 +8,7 @@ Links
 
 :book: **https://adsecurity.org/?p=2535**
 
-[System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()
+`[System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()`
   -Much more concise results 
 
 ```
