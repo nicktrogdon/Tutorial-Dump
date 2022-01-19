@@ -32,3 +32,11 @@ IEX ([System.IO.StreamReader]($r.GetResponseStream())).ReadToEnd()
 
 
 
+
+
+### Powershell Detection
+- System-wide transcription
+- Script Block Logging
+- AMSI (AntMalware Scan Interface)
+- CLM (Constrained Language Mode)
+ - Integration with Applocker & WDAC (Device Guard)
