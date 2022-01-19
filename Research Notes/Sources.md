@@ -22,11 +22,6 @@ Links
 
 
 `([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()`
-```
-SourceName	TargetName	TrustType	TrustDirection
-```
-
- `(([System.DirectoryServices.ActiveDirectory.Forest]::GetForest((New-Object System.DirectoryServices.ActiveDirectory.DirectoryContext(‘Forest’, $ForestRootDomain)))).GetAllTrustRelationships()`
 ![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/ForestTrustRelationships.png)
 ```
 ```
