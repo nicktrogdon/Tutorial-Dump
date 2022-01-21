@@ -69,3 +69,7 @@ get-aduser -filter {AdminCount -eq 1} -Properties Name,AdminCount,ServicePrincip
 ````
 get-adgroup -filter {GroupCategory -eq ‘Security’ -AND Name -like “*admin*”}
 ```
+
+
+
+~~~~still more
