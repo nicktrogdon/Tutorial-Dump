@@ -49,8 +49,5 @@ Domain Trust
 
 
 Discover Service Accounts
-
+Discover Service Accounts
 https://github.com/PyroTek3/PowerShell-AD-Recon/blob/master/Find-PSServiceAccounts
-
-
-
