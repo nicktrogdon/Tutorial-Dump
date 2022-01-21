@@ -33,21 +33,39 @@ Forest Global Catalogs
 
 
 #### Domain
-Domain Information
+##### Domain Information
  ```
 [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
 ```
 ![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/GetCurrentDomain().png)
 
 
-Domain Trust
+##### Domain Trust
 
 ```
 ([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()
 ```
 ![This is an image](https://github.com/full-recover/Tutorial-Dump/blob/master/Research%20Notes/Results/AD-Security/ForestTrustRelationships.png)
 
+### Users & Groups
 
-Discover Service Accounts
-Discover Service Accounts
+#### Discover Enterprise Services w/o Network Scanning
+The following lines can be summized within the *Find-PSServiceAccounts' script for finding the Service accounts
 https://github.com/PyroTek3/PowerShell-AD-Recon/blob/master/Find-PSServiceAccounts
+
+This will discover which Windows computers have RDP (TERMSERV), WinRM (WSMAN), GetCurrentDomain
+~AD Module needed
+```
+get-adcomputer -filter {ServicePrincipalName -like “*TERMSRV*”} -Properties OperatingSystem,OperatingSystemVersion,OperatingSystemServicePack,PasswordLastSet,LastLogonDate,ServicePrincipalName,TrustedForDelegation,TrustedtoAuthForDelegation
+```
+
+##### Identify Admin Accounts
+This will show thos with "AdminCount" set to 1. Which can display those accounts which are no longer admins
+```
+get-aduser -filter {AdminCount -eq 1} -Properties Name,AdminCount,ServicePrincipalName,PasswordLastSet,LastLogonDate,MemberOf
+```
+
+##### Find Admin Groups
+````
+get-adgroup -filter {GroupCategory -eq ‘Security’ -AND Name -like “*admin*”}
+```
